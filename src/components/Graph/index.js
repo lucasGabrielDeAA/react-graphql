@@ -7,7 +7,7 @@ function Graph() {
   const [information, setInformation] = useState({ hello: () => 'Hello world!' });
 
   useEffect(() => {
-    graphql(schema, '{ ooo }', information).then(response => console.log(response));
+    graphql(schema, '{ hello }', information).then(response => console.log(response));
   }, [information, schema]);
 
   return (
